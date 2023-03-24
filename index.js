@@ -13,7 +13,7 @@ app.use(cors({
 }))
 
 app.get("/", function(req, res){
-    let sql = "SELECT * FROM Bfficial_1_data";
+    let sql = "SELECT * FROM real_Analysis";
     connection.query(sql, function(err, results){
         if (err) throw err;
     res.send(results);
