@@ -7,7 +7,7 @@ const connection = require("./database");
 
 
 app.use(cors({
-    origin:"http://localhost:3010",
+    origin:"*",
     methods:"GET",
     optionsSuccessStatus: 200,
 }))
