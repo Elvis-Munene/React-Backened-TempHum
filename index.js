@@ -28,7 +28,7 @@ app.get("/export", function(request, response, next){
    connection.query('SELECT * FROM real_Analysis', function(error, data){
     const mysql_data = JSON.parse(JSON.stringify(data));
 
-    const file_header = ['id','temperature', 'humidity', 'record_date'];
+    const file_header = ['temperature', 'humidity', 'record_date'];
     const json_data = new data_exporter({file_header});
     const csv_data =  json_data.parse(mysql_data);
 
